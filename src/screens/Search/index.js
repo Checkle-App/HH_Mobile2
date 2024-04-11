@@ -16,6 +16,7 @@ import {Position, Functions} from '../../utils/constants';
 import ProgressiveImage from '../../components/ProgressiveImage';
 import {debounce} from 'lodash';
 import * as actions from '../../utils/redux/actions';
+import keys from '../../../keys';
 
 const handleThumbnail = thumbnail => {
   const size = '_100x100';
@@ -123,7 +124,7 @@ const GooglePlacesInput = props => {
         return;
       }}
       query={{
-        key: 'AIzaSyArLSuzxzr1WWKPi_h_62q9zFOjTJ6ifO4',
+        key: keys.googlePlacesAPIKey,
         language: 'en',
         region: 'US',
         types: '(cities)',
