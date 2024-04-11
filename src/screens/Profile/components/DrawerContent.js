@@ -3,14 +3,19 @@ import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import {connect} from 'react-redux';
 import {DrawerContentScrollView, DrawerItem} from '@react-navigation/drawer';
 import React from 'react';
-import {StyleSheet, View, Linking, Alert} from 'react-native';
+import {
+  StyleSheet,
+  View,
+  Linking,
+  // Alert
+} from 'react-native';
 import {Drawer, useTheme} from 'react-native-paper';
 import Animated from 'react-native-reanimated';
 
 import * as actions from '../../../utils/redux/actions';
-import auth from '@react-native-firebase/auth';
-import {GoogleSignin} from '@react-native-google-signin/google-signin';
-import {Functions} from '../../../utils/constants';
+// import auth from '@react-native-firebase/auth';
+// import {GoogleSignin} from '@react-native-google-signin/google-signin';
+// import {Functions} from '../../../utils/constants';
 
 function DrawerContent(props) {
   const paperTheme = useTheme();
@@ -19,35 +24,35 @@ function DrawerContent(props) {
     outputRange: [-100, -85, -70, -45, 0],
   });
 
-  const handleLogout = async () => {
-    if (auth().currentUser) {
-      await auth().signOut();
-    }
-    if (await GoogleSignin.isSignedIn()) {
-      await GoogleSignin.signOut();
-    }
+  // const handleLogout = async () => {
+  //   if (auth().currentUser) {
+  //     await auth().signOut();
+  //   }
+  //   if (await GoogleSignin.isSignedIn()) {
+  //     await GoogleSignin.signOut();
+  //   }
 
-    props.dispatchSetUser({
-      user: null,
-    });
-    props.navigation.closeDrawer();
-  };
+  //   props.dispatchSetUser({
+  //     user: null,
+  //   });
+  //   props.navigation.closeDrawer();
+  // };
 
-  const handleDeleteAccount = async () => {
-    if (auth().currentUser) {
-      await auth().signOut();
-    }
-    if (await GoogleSignin.isSignedIn()) {
-      await GoogleSignin.signOut();
-    }
+  // const handleDeleteAccount = async () => {
+  //   if (auth().currentUser) {
+  //     await auth().signOut();
+  //   }
+  //   if (await GoogleSignin.isSignedIn()) {
+  //     await GoogleSignin.signOut();
+  //   }
 
-    Functions.deleteUserAccount(props.user.uid);
-    props.dispatchSetUser({
-      user: null,
-    });
+  //   Functions.deleteUserAccount(props.user.uid);
+  //   props.dispatchSetUser({
+  //     user: null,
+  //   });
 
-    props.navigation.closeDrawer();
-  };
+  //   props.navigation.closeDrawer();
+  // };
 
   return (
     <DrawerContentScrollView {...props}>
@@ -100,7 +105,7 @@ function DrawerContent(props) {
             label="Feedback"
           />
         </Drawer.Section>
-        {props.user ? (
+        {/* {props.user ? (
           <Drawer.Section style={styles.drawerSection}>
             <DrawerItem
               onPress={() => {
@@ -116,8 +121,8 @@ function DrawerContent(props) {
               label="Logout"
             />
           </Drawer.Section>
-        ) : null}
-        {props.user ? (
+        ) : null} */}
+        {/* {props.user ? (
           <Drawer.Section style={styles.drawerSection}>
             <DrawerItem
               onPress={() => {
@@ -139,7 +144,7 @@ function DrawerContent(props) {
               label="Delete Account"
             />
           </Drawer.Section>
-        ) : null}
+        ) : null} */}
         {/* <Drawer.Section>
           <DrawerItem
             icon={({color, size}) => (

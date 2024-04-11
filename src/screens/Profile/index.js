@@ -1,30 +1,34 @@
 import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
-import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
+// import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import MaterialCommunityIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {
   Platform,
   Image,
   StyleSheet,
-  Text,
+  // Text,
   View,
   TouchableOpacity,
   ScrollView,
   Dimensions,
   StatusBar,
-  Linking,
+  // Linking,
 } from 'react-native';
-import {ActivityIndicator, Subheading, Caption} from 'react-native-paper';
+import {
+  ActivityIndicator,
+  // Subheading,
+  // Caption
+} from 'react-native-paper';
 import LinearGradient from 'react-native-linear-gradient';
 import {getStatusBarHeight} from 'react-native-status-bar-height';
-import Slider from '../../components/Slider';
+// import Slider from '../../components/Slider';
 import * as actions from '../../utils/redux/actions';
 
-import {Functions} from '../../utils/constants';
-import auth from '@react-native-firebase/auth';
-import firebase from '@react-native-firebase/app';
-import {GoogleSignin} from '@react-native-google-signin/google-signin';
-import {appleAuth} from '@invertase/react-native-apple-authentication';
+// import {Functions} from '../../utils/constants';
+// import auth from '@react-native-firebase/auth';
+// import firebase from '@react-native-firebase/app';
+// import {GoogleSignin} from '@react-native-google-signin/google-signin';
+// import {appleAuth} from '@invertase/react-native-apple-authentication';
 
 const {width: viewportWidth} = Dimensions.get('window');
 function wp(percentage) {
@@ -42,64 +46,64 @@ const Profile = props => {
     return unsubscribe;
   }, [props.navigation]);
 
-  const ProfileSlider = props => {
-    return (
-      <View style={{paddingVertical: 20}}>
-        <Slider type={props.type} data={props.data} />
-      </View>
-    );
-  };
+  // const ProfileSlider = props => {
+  //   return (
+  //     <View style={{paddingVertical: 20}}>
+  //       <Slider type={props.type} data={props.data} />
+  //     </View>
+  //   );
+  // };
 
   const statusBarHeight =
     Platform.OS === 'ios' ? getStatusBarHeight() : StatusBar.currentHeight;
 
   const {loading} = props;
 
-  const handleLogin = async credential => {
-    await auth().signInWithCredential(credential);
-    const currentUser = auth().currentUser;
-    const uid = currentUser.uid;
-    const userInfo = currentUser._user;
+  // const handleLogin = async credential => {
+  //   await auth().signInWithCredential(credential);
+  //   const currentUser = auth().currentUser;
+  //   const uid = currentUser.uid;
+  //   const userInfo = currentUser._user;
 
-    const user = await Functions.readConsumer(uid, userInfo);
+  //   const user = await Functions.readConsumer(uid, userInfo);
 
-    props.dispatchSetUser({user});
-  };
+  //   props.dispatchSetUser({user});
+  // };
 
-  const loginWithGoogle = async () => {
-    try {
-      await GoogleSignin.hasPlayServices();
+  // const loginWithGoogle = async () => {
+  //   try {
+  //     await GoogleSignin.hasPlayServices();
 
-      const data = await GoogleSignin.signIn();
+  //     const data = await GoogleSignin.signIn();
 
-      const credential = firebase.auth.GoogleAuthProvider.credential(
-        data.idToken,
-        data.accessToken,
-      );
+  //     const credential = firebase.auth.GoogleAuthProvider.credential(
+  //       data.idToken,
+  //       data.accessToken,
+  //     );
 
-      handleLogin(credential);
-    } catch (error) {}
-  };
+  //     handleLogin(credential);
+  //   } catch (error) {}
+  // };
 
-  const onAppleButtonPress = async () => {
-    // Start the sign-in request
-    const appleAuthRequestResponse = await appleAuth.performRequest({
-      requestedOperation: appleAuth.Operation.LOGIN,
-      requestedScopes: [appleAuth.Scope.EMAIL, appleAuth.Scope.FULL_NAME],
-    });
+  // const onAppleButtonPress = async () => {
+  //   // Start the sign-in request
+  //   const appleAuthRequestResponse = await appleAuth.performRequest({
+  //     requestedOperation: appleAuth.Operation.LOGIN,
+  //     requestedScopes: [appleAuth.Scope.EMAIL, appleAuth.Scope.FULL_NAME],
+  //   });
 
-    // Create a Firebase credential from the response
-    const {identityToken, nonce} = appleAuthRequestResponse;
-    if (identityToken) {
-      const credential = firebase.auth.AppleAuthProvider.credential(
-        identityToken,
-        nonce,
-      );
+  //   // Create a Firebase credential from the response
+  //   const {identityToken, nonce} = appleAuthRequestResponse;
+  //   if (identityToken) {
+  //     const credential = firebase.auth.AppleAuthProvider.credential(
+  //       identityToken,
+  //       nonce,
+  //     );
 
-      // Sign the user in with the credential
-      handleLogin(credential);
-    }
-  };
+  //     // Sign the user in with the credential
+  //     handleLogin(credential);
+  //   }
+  // };
 
   return (
     <React.Fragment>
@@ -163,7 +167,7 @@ const Profile = props => {
               }}>
               <MaterialCommunityIcon name={'menu'} size={30} color={'gray'} />
             </TouchableOpacity>
-            {props.user ? (
+            {/* {props.user ? (
               <>
                 <View style={{paddingVertical: 20, paddingHorizontal: 20}}>
                   <View style={{paddingVertical: 20}}>
@@ -240,7 +244,7 @@ const Profile = props => {
                   </View>
                 </View>
               </>
-            )}
+            )} */}
           </ScrollView>
         )}
       </View>
@@ -411,55 +415,55 @@ const styles = StyleSheet.create({
   },
 });
 
-const loginStyles = StyleSheet.create({
-  tagLineBox: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 40,
-    marginBottom: 50,
-  },
-  taglineText: {
-    fontWeight: '300',
-    fontFamily: Platform.OS === 'android' ? 'sans-serif-light' : undefined,
-    fontSize: 26,
-    textAlign: 'center',
-    color: 'rgba(255, 255, 255, 0.85)',
-  },
-  button: {
-    width: 298,
-    borderRadius: 200,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingVertical: 10,
-  },
-  appleButton: {
-    width: 298,
-    borderRadius: 100,
-    paddingVertical: 10,
-  },
-  googleLogin: {
-    backgroundColor: '#FFFFFF',
-    borderColor: '#B5B5B5',
-    borderWidth: 1,
-    marginTop: 10,
-    minHeight: 40,
-    paddingVertical: 12,
-  },
-  buttonText: {
-    fontWeight: '600',
-    fontSize: 15,
-    textAlign: 'center',
-  },
-  privacyBox: {
-    marginTop: 15,
-  },
-  privacyText: {
-    fontWeight: '300',
-    fontFamily: Platform.OS === 'android' ? 'sans-serif-light' : undefined,
-    fontSize: 13,
-    textAlign: 'center',
-    color: 'rgba(255, 255, 255, 0.85)',
-    lineHeight: 20,
-  },
-});
+// const loginStyles = StyleSheet.create({
+//   tagLineBox: {
+//     justifyContent: 'center',
+//     alignItems: 'center',
+//     marginTop: 40,
+//     marginBottom: 50,
+//   },
+//   taglineText: {
+//     fontWeight: '300',
+//     fontFamily: Platform.OS === 'android' ? 'sans-serif-light' : undefined,
+//     fontSize: 26,
+//     textAlign: 'center',
+//     color: 'rgba(255, 255, 255, 0.85)',
+//   },
+//   button: {
+//     width: 298,
+//     borderRadius: 200,
+//     flexDirection: 'row',
+//     alignItems: 'center',
+//     justifyContent: 'center',
+//     paddingVertical: 10,
+//   },
+//   appleButton: {
+//     width: 298,
+//     borderRadius: 100,
+//     paddingVertical: 10,
+//   },
+//   googleLogin: {
+//     backgroundColor: '#FFFFFF',
+//     borderColor: '#B5B5B5',
+//     borderWidth: 1,
+//     marginTop: 10,
+//     minHeight: 40,
+//     paddingVertical: 12,
+//   },
+//   buttonText: {
+//     fontWeight: '600',
+//     fontSize: 15,
+//     textAlign: 'center',
+//   },
+//   privacyBox: {
+//     marginTop: 15,
+//   },
+//   privacyText: {
+//     fontWeight: '300',
+//     fontFamily: Platform.OS === 'android' ? 'sans-serif-light' : undefined,
+//     fontSize: 13,
+//     textAlign: 'center',
+//     color: 'rgba(255, 255, 255, 0.85)',
+//     lineHeight: 20,
+//   },
+// });
