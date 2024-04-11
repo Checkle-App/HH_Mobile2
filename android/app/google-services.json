@@ -1,0 +1,88 @@
+{
+  "project_info": {
+    "project_number": "598272945249",
+    "firebase_url": "https://checkle-prod.firebaseio.com",
+    "project_id": "checkle-prod",
+    "storage_bucket": "checkle-prod.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:598272945249:android:64141607157a9fa5",
+        "android_client_info": {
+          "package_name": "com.checkleinc.checkle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "598272945249-b1goode5movfm4avoied7e28lmt7e35q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.checkleinc.checkle",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "598272945249-hcumct9ktuf8f13eval42t3orh6qvsfj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.checkleinc.checkle",
+            "certificate_hash": "e09320bc767fd58501f61547d519b1a658e07292"
+          }
+        },
+        {
+          "client_id": "598272945249-iu4fa20ehimsdgciae8l2uv62aitliq0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.checkleinc.checkle",
+            "certificate_hash": "c9b7c019a382e3a783f66038683c20edbaac2251"
+          }
+        },
+        {
+          "client_id": "598272945249-so175jnccutia5cop8pecp14bt78jetk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.checkleinc.checkle",
+            "certificate_hash": "73108bf3caf3530dbb674c181c9ccb1d7ae5504e"
+          }
+        },
+        {
+          "client_id": "598272945249-vftet9jrmievuk15kvcscj5gelc6u5bt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.checkleinc.checkle",
+            "certificate_hash": "791baad70280f930c4d41fdc9b583dfbf595a2ca"
+          }
+        },
+        {
+          "client_id": "598272945249-utbr4n6ur0lnvqcpv0c56a8fnvn98e40.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAI8hYPxKvHCBgRPOXF5VHLJ-RVcKxvJDI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "109030186027132476958",
+              "client_type": 3
+            },
+            {
+              "client_id": "598272945249-8iil5hjhrrc8rojaonrmbrn0sd73mre0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.checkleinc.checkle",
+                "app_store_id": "1466253211"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

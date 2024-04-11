@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>598272945249-8iil5hjhrrc8rojaonrmbrn0sd73mre0.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.598272945249-8iil5hjhrrc8rojaonrmbrn0sd73mre0</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>598272945249-ah6s8cppo3v8a89pl6b6gtn03n3m0u4r.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCn_iwkMctOlSWW7n38IWTgb6c1t3m-lik</string>
+	<key>GCM_SENDER_ID</key>
+	<string>598272945249</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.checkleinc.checkle</string>
+	<key>PROJECT_ID</key>
+	<string>checkle-prod</string>
+	<key>STORAGE_BUCKET</key>
+	<string>checkle-prod.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:598272945249:ios:64141607157a9fa5</string>
+	<key>DATABASE_URL</key>
+	<string>https://checkle-prod.firebaseio.com</string>
+</dict>
+</plist>

@@ -14,7 +14,6 @@ import {GooglePlacesAutocomplete} from 'react-native-google-places-autocomplete'
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import {Position, Functions} from '../../utils/constants';
 import ProgressiveImage from '../../components/ProgressiveImage';
-import keys from '../../../keys';
 import {debounce} from 'lodash';
 import * as actions from '../../utils/redux/actions';
 

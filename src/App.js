@@ -1,14 +1,13 @@
 import 'react-native-gesture-handler';
 import React, {useEffect} from 'react';
 import {LogBox} from 'react-native';
-import SplashScreen from 'react-native-splash-screen';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 /* Redux */
 import {Functions} from './utils/constants';
 import {connect} from 'react-redux';
 import * as actions from './utils/redux/actions';
 import auth from '@react-native-firebase/auth';
-import {GoogleSignin} from '@react-native-google-signin/google-signin';
+// import {GoogleSignin} from '@react-native-google-signin/google-signin';
 
 import Main from './Main';
 
@@ -57,14 +56,12 @@ function App(props) {
       'Non-serializable values were found in the navigation state',
     ]);
 
-    GoogleSignin.configure({
-      webClientId:
-        '598272945249-utbr4n6ur0lnvqcpv0c56a8fnvn98e40.apps.googleusercontent.com', // prod
-      // webClientId: '1010474855746-frg38covbpvd7a0sv4qd7ieaengn92ar.apps.googleusercontent.com', // dev
-      offlineAccess: false,
-    });
-
-    SplashScreen.hide();
+    // GoogleSignin.configure({
+    //   webClientId:
+    //     '598272945249-utbr4n6ur0lnvqcpv0c56a8fnvn98e40.apps.googleusercontent.com', // prod
+    //   // webClientId: '1010474855746-frg38covbpvd7a0sv4qd7ieaengn92ar.apps.googleusercontent.com', // dev
+    //   offlineAccess: false,
+    // });
   }, []);
 
   return (
