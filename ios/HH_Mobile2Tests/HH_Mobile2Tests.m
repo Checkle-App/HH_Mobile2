@@ -7,11 +7,11 @@
 #define TIMEOUT_SECONDS 600
 #define TEXT_TO_LOOK_FOR @"Welcome to React"
 
-@interface HH_Mobile2Tests : XCTestCase
+@interface CheckleTests : XCTestCase
 
 @end
 
-@implementation HH_Mobile2Tests
+@implementation CheckleTests
 
 - (BOOL)findSubviewInView:(UIView *)view matching:(BOOL (^)(UIView *view))test
 {

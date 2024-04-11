@@ -1,4 +1,4 @@
-package com.hh_mobile2
+package com.checkleinc.checkle
 
 import android.app.Application
 import com.facebook.react.PackageList
